@@ -17,7 +17,7 @@ public class EmergencySystem {
     public boolean agregarPaciente(String nombre, String descripcion) {
         String prioridad = enfermedades.get(descripcion.toLowerCase());
         if (prioridad == null) return false;
-        Paciente p = new Paciente(nombre, descripcion, prioridad);
+        Paciente p = new Paciente(nombre, descripcion, prioridad.charAt(0));
         cola.add(p);
         return true;
     }
